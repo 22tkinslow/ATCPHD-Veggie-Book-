@@ -12,6 +12,7 @@ The open source code for the VeggieBook iOS and Android mobile applications.
 2. Create a development certificate and download the provisioning profile to launch the VeggieBook application on a device from Xcode, if you don't already have one. The steps below are copied from the prompts for creating a certificate on Apple's website.
     1. To manually generate a Certificate, you need a Certificate Signing Request (CSR) file from your Mac. To create a CSR file, follow the instructions below to create one using Keychain Access.
         1. Create a CSR file. In the Applications folder on your Mac, open the Utilities folder and launch Keychain Access. Within the Keychain Access drop down menu, select Keychain Access > Certificate Assistant > Request a Certificate from a Certificate Authority.
+        ![Create CSR file](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/createCSR.png)
             1. In the Certificate Information window, enter the following information:
                 - In the User Email Address field, enter your email address.
                 - In the Common Name field, create a name for your private key (e.g., John Doe Dev Key).
@@ -19,11 +20,13 @@ The open source code for the VeggieBook iOS and Android mobile applications.
                 -  the "Request is" group, select the "Saved to disk" option.
             2. Click Continue within Keychain Access to complete the CSR generating process.
     2. Upload your personal certificate for development on your [Apple Team Agent account](https://developer.apple.com/account/ios/certificate/create) (assuming you've been added to the development team account as a "Team Agent").
-        1. Select "iOS App Development" from the "Development" section and click "Continue".
-        2. The instructions for creating a certificate through Keychain Access should be displayed. Select "Continue".
+        1. Click "Create a Certificate".
+        1. Select "iOS App Development" from the "Software" section and click "Continue".
+        2. You can find instructions for creating a certificate through Keychain Access by clicking "Learn More".
         3. Click "Choose File..." to select the certificate you created through Keychain. Select "Continue".
     3. Add the new certificate to the existing provisioning profile.
-        1. Select "Development" under the "Provisioning Profiles" section on the [Certificates, Identifiers & Profiles page](https://developer.apple.com/account/ios/profile/), ensuring "iOS, tvOS, watchOS" is selected in the drop-down at the top, left of the page.
+        1. In the "Profiles" section on the [Certificates, Identifiers & Profiles page](https://developer.apple.com/account/ios/profile/), select "Development" and "iOS" from the drop-downs at the top, right of the page.
+        ![Profiles page dropdowns](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/profilesPage.png)
         2. Expand the provisioning profile for the VeggieBook application by clicking the title. Then select "Edit". Permissions are required for this step. Contact someone with adequate permissions if you don't have enough.
         3. Select the newly uploaded certificate from the "Certificates" section and click "Generate". Select "Download" on the following page to download the provisioning profile to your computer.
         4. Double click the downloaded file from the file system. This will automatically open the provisioning file in Xcode.
@@ -40,7 +43,8 @@ The open source code for the VeggieBook iOS and Android mobile applications.
     1. In the project navigator pane at the left-hand side of Xcode, select the root-level project, VeggieBook. The project editor should open.
     2. On left-hand side of the project editor, select the VeggieBook option under "Targets".
     3. Select the "Signing and Capabilities" tab on the target editor page.
-    4. If there is an issue, under the "Signing" section, a "Status" line item will appear with a red exclamation mark icon that says "No provisioning profile for team '{team}' matching '{provisioning profile}' found". Resolve this issue by registering your device through your development team's Apple developer account.
+    4. If there is an issue, under the "Signing" section, a "Status" line item will appear with a red exclamation mark icon that says "No profile for team '{team}' matching '{provisioning profile}' found". Resolve this issue by registering your device through your development team's Apple developer account.
+    ![Project editory signing error](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/projectEditorSigningError.png)
 8. Unlock your iOS device's screen.
 9. Build and run the selected scheme. An icon for VeggieBook will appear on your device's home screen. If it isn't visible and the build has completed, place your finger in the middle of the screen and slide it down to reveal the search bar. Enter "VeggieBook" to find it.
 See [Apple's guide](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/dev5a825a1ca) for running an app on a connected device for additional help.
