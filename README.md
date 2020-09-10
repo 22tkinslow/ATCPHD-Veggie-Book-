@@ -1,6 +1,9 @@
 # VeggieBook
 The open source code for the VeggieBook iOS and Android mobile applications.
 
+# Video Demo
+Watch [this video](https://www.youtube.com/watch?v=BBmlMQ2QuEw) for an explanation and demonstration of the application.
+
 ## iOS Development
 ### Running the VeggieBook iOS Application from Xcode
 #### Open In A Simulator
