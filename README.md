@@ -101,3 +101,65 @@ A developer with the distribution certificate in their local Keychain must expor
 4. Double click the downloaded file from the file system. This will automatically install it in the Keychain.
 5. Verify the setup by visiting the Project Editor page in Xcode. If there are warnings/errors, they will be displayed in the "Signing" section under "Release".
 ![Project Profile Signing section](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/projectEditorReleaseSigningError.png)
+
+#### Create the App in App Store Connect
+1. Log in to [App Store Connect](https://appstoreconnect.apple.com/login).
+![App Store Connect Homepage](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/appStoreConnectHomepage.png)
+2. Go to "My Apps" > click the blue "+" > "New App".
+3. Fill out the form and click "Create".
+4. Once your app is created, click on the "VeggieBooks" app and fill out all the information in the "App Store" tab.
+![App Information Page](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/appStoreConnectAppInfo.png)
+
+#### Archive and Upload to App Store Connect
+1. In the Xcode Project Editor, set the version and build numbers on the project editor’s general target configuration page.
+    1. Open the target configuration page.
+        1. In the project navigator pane at the left-hand side of Xcode, select the application.
+        2. At the top left corner or left hand side of the project editor, select the application option under "Targets".
+        3. Select the "General" tab on the target editor page.
+    2. Enter the new version and build numbers into the "Version" and "Build" fields under the "Identity" section.
+    3. Make sure "iPad" is **unchecked** in the Deployment Info Target Device section. (If you leave it checked, you'll have to add support for iPad and forever maintain support for it)
+    ![Build Settings](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/projectEditorNoIpad.png)
+    4. Commit the version and tag it for record keeping through git.
+2. Archive the application using the Xcode interface.
+    1. Select the application as the scheme. "Product" > "Scheme" > {scheme}.
+    2. Select "Generic iOS Device" as the target. "Product" > "Destination" > "Generic iOS Device".
+    3. Archive the project. From the main menu, select "Product" > "Archive".
+3. Upload the archive to App Store Connect.
+    1. The Organizer window should open once the project has completed archiving. If it isn't, open it from the main navigation bar by selecting "Window" > "Organizer" > "Archives" tab.
+    ![Archive Panel](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/archivePanel.png)
+    2. Highlight the recent archive with the version specified previously in the list.
+    3. *(Optional)* Click "Validate App". *Note that this is also done when "Distribute App" is selected.*
+    4. Click "Distribute App" > "App Store Connect" > "Upload" > Next". *Note that this does not actually upload to the App Store directly. This will push the archive to App Store Connect. Further actions are required in App Store Connect to setup testing and deploy it to the App Store.*
+    5. Deselect "Include bitcode for iOS Content" from the distribution options (leaving "Upload your app's symbols to receive symolicated reports from Apple" checked) and click "Next".
+    ![Archive Distribution Options](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/archiveDistributionOptions.png)
+    6. You might get a dialog mentioning to re-sign. If so, select "Manually manage signing" and select your certificate and profile you created earlier in this process.
+    7. The upload will be available in App Store Connect after it processes.
+4. TestFlight Internal
+    1. Once a build is uploaded, it should be visible on the TestFlight page within [App Store Connect](https://appstoreconnect.apple.com/login). To get there, go to "My Apps" > "VeggieBooks", then click the "TestFlight" tab.
+    ![Test Flight Panel](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/readmeImages/appStoreConnectTestFlight.png)
+    2. Add desired internal testers. These will be the people that are notified when a new version of the application is available for testing. You can find the list of available testers on the left under "All Testers".
+    3. If you would like to add more testers to the internal App Store Connect developer list:
+        1. Go back to the App store Connect homepage.
+        2. Select "Users and Access".
+        3. Select the blue "+" next to the "Users and Access" title.
+        4. Follow the prompts to add a new user.
+        5. The added user must accept the invitation to App Store Connect to proceed.
+        6. Select "Apps" > "VeggieBooks" > "TestFlight" tab > "App Store Connect Users" tab (left-hand pane).
+        7. Select the blue "+" next to the "Testers" title.
+        8. Select the user that should be added as a tester for the application and select "Add". If the desired user is not available in the list, ensure they’re added on the iTunes Connect account with proper permissions and that they have accepted the invitation.
+    4. Open the application build for internal testing by resolving the missing export compliance warning.
+        1. Select "My Apps > the appropriate application > "TestFlight" tab > "iOS" tab (left-hand pane under "Builds").
+        2. Expand the drop-down menu for the version that will be tested.
+        3. Click the build number link (highlighted in blue) for the build that will be tested.
+        4. At the top right corner of the page, click "Provide Export Compliance Information".
+        5. For the compliance questions, in the past, VeggieBook answered:
+            1.Does your app use encryption? YES
+            2. Does your app qualify for any of the exemptions in Category 5, Part 2? YES
+        6. Follow the prompts and select "Start Internal Testing".
+    5. Testers with the application already installed will receive notice that a new version is available and an update request through push notifications. Everyone added as an internal tester through TestFlight will receive an email regarding the new build.
+5. Once you're satisfied with the app, you can submit the app for review by going to the app's "App Store" tab in App Store Connect.
+6. There should be a build number on the left side nav, click that.
+7. Click "Submit for Review" on the top right.
+8. The review process can take a couple days, you should receive an email when the review is complete.
+9. If your review is approved, the app will receive a status of "Pending Developer Release", click "Release This Version" on the right side of the pane.
+10. Your app will show up in the App Store within a few minutes to an hour.
