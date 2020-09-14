@@ -1,0 +1,14 @@
+//
+//  ChicagoRelease.xcconfig
+//  VeggieBook
+//
+//  Created by TechEmpower on 9/11/20.
+//  Copyright © 2020 Quick Help For Meals, LLC. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+DEVELOPMENT_TEAM =
+PROVISIONING_PROFILE_ID =
+GOOGLE_CLIENT_ID = // Contact Dan DiPasquo for this info
