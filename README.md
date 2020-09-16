@@ -1,11 +1,14 @@
 # VeggieBook
 The open source code for the VeggieBook iOS and Android mobile applications.
 
-# Video Demo
+## Video Demo
 Watch [this video](https://www.youtube.com/watch?v=BBmlMQ2QuEw) for an explanation and demonstration of the application.
 
 ## iOS Development
 ### Running the VeggieBook iOS Application from Xcode
+#### Fill Out Configuration Values in .xcconfig and .plist Files
+1. Before attempting to build, there are some `.xcconfig` files in the [VeggieBook](https://github.com/VeggieBookOpenSource/VeggieBook/tree/master/iOS/VeggieBook) folder, fill out the values for those variables.
+2. Also before building, in each of the `GoogleService-{schemeName}-Info.plist` [files](https://github.com/VeggieBookOpenSource/VeggieBook/tree/master/iOS/VeggieBook/VeggieBook) you'll need to add the values for `CLIENT_ID`, `REVERSED_CLIENT_ID` and `GOOGLE_APP_ID`.
 #### Open In A Simulator
 1. Select a scheme by visiting the main menu and selecting "Product" > "Scheme" > {your scheme}.
 2. Select an iOS Simulator destination by visiting the main menu and selecting "Product" > "Destination" > {any iPhone/iPad simulator or iPhone X}. The simulator needed may vary by task.
