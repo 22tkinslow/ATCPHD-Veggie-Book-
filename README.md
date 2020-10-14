@@ -1,6 +1,8 @@
 # VeggieBook
 The open source code for the VeggieBook iOS and Android mobile applications.
 
+For answers to Frequently Asked Questions about the app, see our [FAQs page](https://github.com/VeggieBookOpenSource/VeggieBook/blob/master/FAQs.md).
+
 ## Video Demo
 Watch [this video](https://www.youtube.com/watch?v=BBmlMQ2QuEw) for an explanation and demonstration of the application.
 
