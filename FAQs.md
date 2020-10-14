@@ -75,6 +75,6 @@ VeggieBook has been used in Michigan, Illinois, Texas, Colorado, and California.
 The app is now ready for even wider dissemination. 
 
 
-##If my organization wanted to adopt the app, could we track how people use it?
+## If my organization wanted to adopt the app, could we track how people use it?
 Yes. VeggieBook has a backend analytics function that records each user’s
 selection of app content. This function is part of the Open Source entry on GitHub. 
