@@ -5,6 +5,10 @@ For answers to Frequently Asked Questions about the app, see our [FAQs page](htt
 
 The iOS version of the app was built by [TechEmpower Inc.](https://www.techempower.com/) while the Android version was built by DiPasquo Consulting.
 
+#### TechEmpower Contact Information:
+Email: info@techempower.com
+Phone: 310-524-1700
+
 ## Video Demo
 Watch [this video](https://www.youtube.com/watch?v=BBmlMQ2QuEw) for an explanation and demonstration of the application.
 
