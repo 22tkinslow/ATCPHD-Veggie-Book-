@@ -1,4 +1,5 @@
 //  Copyright © 2020 Quick Help For Meals, LLC. All rights reserved.
+//  Software developed at the University of Southern California.
 //
 //  This file is part of VeggieBook.
 //

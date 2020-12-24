@@ -5,6 +5,7 @@
 //  Created by Daniel DiPasquo on 12/15/16.
 //  Copyright © 2016 DiPasquo Consulting. All rights reserved.
 //  Copyright © 2020 Quick Help For Meals, LLC. All rights reserved.
+//  Software developed at the University of Southern California.
 //
 //  This file is part of VeggieBook.
 //
